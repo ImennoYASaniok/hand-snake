@@ -1,14 +1,20 @@
+"""
+main.py - главный модуль, который запускает всё приложение
+
+Содержит код запуска сеанса работы приложения
+"""
+
 import sys
-import cv2
-from camera import Camera
+from camera import CameraRenderer
+from utils import check_press_button
 
 if __name__ == '__main__':
-    camera = Camera()
+    camera_render = CameraRenderer()
 
     while True:
-        camera.show()
-        if cv2.waitKey(1) == 27:
+        camera_render.show()
+        if check_press_button("esc"):
             break
 
-    camera.quit()
+    camera_render.quit()
     sys.exit()

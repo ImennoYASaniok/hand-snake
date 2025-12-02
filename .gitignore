@@ -115,5 +115,8 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-# Other
+# Data base
 *.sqlite
+
+# Other
+hand.png
